@@ -5,7 +5,7 @@ By Reed Meher | 2024
 ## TABLE of CONTENTS
 
 - [Summary](#summary)
-- [Purpose of Program Files](#purpose-of-program-files)
+- [Languages and Tech](#languages--tech)
 - [How to Use](#how-to-use-the-program)
 - [Future Development and Improvement](#future-development-and-improvement)
 - [About the Author](#about-the-author)
