@@ -5,7 +5,7 @@ use image::load_from_memory;
 use image::ImageOutputFormat::Png;
 
 #[wasm_bindgen]
-pub fn grayscale(encoded_file: &str) {
+pub fn grayscale(encoded_file: &str) -> String {
     log(&"Grayscale called".into());
 
     let base64_to_vector = BASE64_STANDARD.decode(encoded_file).unwrap();
@@ -20,4 +20,12 @@ pub fn grayscale(encoded_file: &str) {
     let mut buffer = vec![];
     img.write_to(&mut buffer, Png).unwrap();
     log(&"New image written".into());
+
+    let encoded_img = BASE64_STANDARD.encode(&buffer);
+    let data_url = format!(
+        "data:image/png;base64,{}",
+        encoded_img
+    );
+
+    data_url
 }
